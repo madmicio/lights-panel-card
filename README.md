@@ -7,58 +7,48 @@
   state-icon-active-color: "#0080ff"
 ```
 # Lights Panel Card
-![all](luci.jpg)
+![all](luci.JPG)
 
 
 # locelace config example
 
 **panel: true** REQUIRED
  ```yaml
-  - title: ''
+ - title: ''
     panel: true
-    path: shutter
-    icon: 'mdi:window-shutter'
+    background: #ffffff
+    path: luci
+    icon: 'mdi:flash'
     badges: []
     cards:
-      - type: 'custom:shutter-cover-panel-card'
-        title: Tapparelle
-        innershadow: noenable
-        iconemboss: noenable
+      - type: custom:lights-cover-panel-card 
+        title: Luci
+        # sidebackground: transparent
+        icon: mdi:lightbulb-multiple-outline
+        showButton: "noshow"
+        # coverdistance: 200px
         entities:
-          - entity: cover.salone
-            name: Salone
-          - entity: cover.veneziana
-          - entity: cover.porta_cucina
-            name: Porta Cucina
-          - entity: cover.cucina
-            name: Cucina
-          - entity: cover.sofia
-            name: Sofia
-          - entity: cover.camera_matrimoniale
-            name: Matrimoniale
-          - entity: cover.emma
-            name: Emma
+          - entity: light.luce_del_pc
+            name: Pc
+          - entity: light.luce_del_divano
+            name: Divano
+          - entity: light.luce_del_tavolo
+            name: Tavolo
+          - entity: light.luce_mensola
+            name: Mensola
+          # - entity: light.luce_cucina
         sidebuttons:
-          - entity: script.apri_tutto
+            # - entity: null
+          - entity: script.script.accendi_luci
             name: Apri Tutto
             label: tapparelle
-            icon: 'mdi:window-shutter-open'
+            icon: 'mdi:lightbulb-on-outline'
             cardtype: script
-          - entity: script.chiudi_tutto
-            name: Chiudi Tutto
+          - entity: script.script.spegni_luci
+            name: Apri Tutto
             label: tapparelle
-            icon: 'mdi:window-shutter'
+            icon: 'mdi:lightbulb-outline'
             cardtype: script
-          - entity: automation.chiusura_tapparella_alba
-            name: chiusura invernale
-            label: automazione
-            icon: 'mdi:weather-sunset-up'
-            cardtype: button
-          - entity: automation.chiusura_tapparelle_invernale
-            name: chiusura invernale
-            label: automazione
-            icon: 'mdi:weather-sunset-down'
-            cardtype: button
 ```
 **NOTE: if you do not need the buttons in the right column of the card you must still enter the following code**
  ```yaml
@@ -67,27 +57,27 @@
 ```
 ## hacs install
 
-1. install `shutter-cover-panel-card.js` plugin
+1. install `lights-cover-panel-card.js` plugin
 
-2. Add a reference to `shutter-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `lights-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
 resources:
   - type: module
-    url: /hacsfiles/shutter-cover-panel-card/shutter-cover-panel-card.js
+    url: /hacsfiles/lights-cover-panel-card/lights-cover-panel-card.js
 ```
 
 ## Install
 
 ### Manual install
 
-1. Download and copy `shutter-cover-panel-card.js` from (https://github.com/madmicio/shutter-cover-panel-card) into your `config/www`  directory.
+1. Download and copy `lights-cover-panel-card.js` from (https://github.com/madmicio/lights-cover-panel-card) into your `config/www`  directory.
 
 2. Add a reference to `shutter-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
   resources:
-    - url: /local/shutter-cover-panel-card.js?v=1
+    - url: /local/lights-cover-panel-card
       type: module
   ```
 
@@ -101,13 +91,15 @@ resources:
 | `covercolor` |  | "#0080ff" | your color | define the cover color |
 | `coverbackground` |  | "#f2f0fa" | your color | define the background cover color and up-stop-downbuttos background color |
 | `background` |  | tranpsarent | your color | define the background card color |
-| `coverWidth` |  | 100px |  | define the cover width |
-| `coverheight` |  | 300px |  | define the cover height |
+| `brightnessWidth` |  | 100px |  | define the dimmer light columns width |
+| `brightnessHeight` |  | 300px |  | define the dimmer light columns height |
+| `switchWidth` |  | 100px |  | define the switch light columns width |
+| `switchHeight` |  | 300px |  | define the switch light columns height |
 | `title` |  | string |  | card title  |
-| `countText` |  | aperte |  | text after numer of open covers |
+| `countText` |  | aperte |  | text after numer of turn on lights |
 | `borderradius` |  | 15px |  | cover border-radius value |
 | `buttonborderradius` |  | 15px |  | buttons border-radius value |
-| `coverdistance` |  | 150px |  | set distance between cover |
+| `lightdistance` |  | 150px |  | set distance between lights |
 | `sidebackground` |  | "#f6f5fa" |  | set sidebar background |
 
 ### entity Options
