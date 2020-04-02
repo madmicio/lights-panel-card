@@ -6,7 +6,7 @@
   button-border-standard: rgba(0, 128, 255, .5)
   state-icon-active-color: "#0080ff"
   
- alternatively you can use this theme: [soft ui theme](https://github.com/madmicio/soft-ui-theme/)
+ alternatively you can use this theme: [Jinja2](https://jinja.palletsprojects.com/en/2.10.x/templates/)
   
 ```
 # Lights Panel Card
