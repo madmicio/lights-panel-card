@@ -24,7 +24,7 @@
     icon: 'mdi:flash'
     badges: []
     cards:
-      - type: custom:lights-cover-panel-card 
+      - type: custom:lights-panel-card 
         title: Luci
         icon: mdi:lightbulb-multiple-outline
         entities:
@@ -57,7 +57,7 @@
 ```
 **Min Config**
  ```yaml
-- type: custom:lights-cover-panel-card 
+- type: custom:lights-panel-card 
     title: Luci
     icon: mdi:lightbulb-multiple-outline
     entities:
