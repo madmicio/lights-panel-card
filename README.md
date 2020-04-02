@@ -56,7 +56,7 @@
 ```
 **Min Config**
  ```yaml
-- type: custom:lights-cover-panel-card 
+- type: custom:lights-panel-card 
     title: Luci
     icon: mdi:lightbulb-multiple-outline
     entities:
@@ -70,25 +70,25 @@
 
 1. install `lights-cover-panel-card.js` plugin
 
-2. Add a reference to `lights-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `lights-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
 resources:
   - type: module
-    url: /hacsfiles/lights-cover-panel-card/lights-cover-panel-card.js
+    url: /hacsfiles/lights-panel-card/lights-cover-panel-card.js
 ```
 
 ## Install
 
 ### Manual install
 
-1. Download and copy `lights-cover-panel-card.js` from (https://github.com/madmicio/lights-cover-panel-card) into your `config/www`  directory.
+1. Download and copy `lights-panel-card.js` from (https://github.com/madmicio/lights-cover-panel-card) into your `config/www`  directory.
 
-2. Add a reference to `shutter-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `shutter-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
   resources:
-    - url: /local/lights-cover-panel-card
+    - url: /local/lights-panel-card
       type: module
   ```
 
