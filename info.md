@@ -23,10 +23,7 @@
     cards:
       - type: custom:lights-cover-panel-card 
         title: Luci
-        # sidebackground: transparent
         icon: mdi:lightbulb-multiple-outline
-        showButton: "noshow"
-        # coverdistance: 200px
         entities:
           - entity: light.luce_del_pc
             name: Pc
@@ -54,6 +51,18 @@
  ```yaml
         sidebuttons:
           - entity: null
+```
+**Min Config**
+ ```yaml
+- type: custom:lights-cover-panel-card 
+    title: Luci
+    icon: mdi:lightbulb-multiple-outline
+    entities:
+        - entity: light.luce_del_pc
+        name: Pc
+
+    sidebuttons:
+        - entity: null
 ```
 ## hacs install
 
