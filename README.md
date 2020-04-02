@@ -7,7 +7,7 @@
   state-icon-active-color: "#0080ff"
 ```
 # Lights Panel Card
-![all](luci.JPG)
+![all](dimmer-switch.JPG)
 
 
 # locelace config example
