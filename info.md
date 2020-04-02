@@ -71,12 +71,12 @@
 
 1. install `lights-cover-panel-card.js` plugin
 
-2. Add a reference to `lights-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `lights-cover-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
 resources:
   - type: module
-    url: /hacsfiles/lights-cover-panel-card/lights-cover-panel-card.js
+    url: /hacsfiles/lightspanel-card/lights-cover-panel-card.js
 ```
 
 ## Install
