@@ -88,8 +88,8 @@ resources:
 | `entities` | string | **Required** | entity | list of entitity |
 | `innershadow` |  | enable | enable/disable | enable - disable innershadow in the card |
 | `iconemboss` |  | enable | enable/disable | enable - disable icon emboss effect |
-| `covercolor` |  | "#0080ff" | your color | define the cover color |
-| `coverbackground` |  | "#f2f0fa" | your color | define the background cover color and up-stop-downbuttos background color |
+| `lightrcolor` |  | "#f2f0fa" | your color | define the cover color |
+| `lightbackground` |  | "#a1a0a6" | your color | define the background cover color and up-stop-downbuttos background color |
 | `background` |  | tranpsarent | your color | define the background card color |
 | `brightnessWidth` |  | 100px |  | define the dimmer light columns width |
 | `brightnessHeight` |  | 300px |  | define the dimmer light columns height |
