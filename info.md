@@ -8,7 +8,6 @@
 ```
  alternatively you can use this theme: [sout ui theme](https://github.com/madmicio/soft-ui-theme/)
  
- 
 # Lights Panel Card
 ![all](dimmer-switch.JPG)
 
@@ -71,21 +70,21 @@
 
 1. install `lights-panel-card.js` plugin
 
-2. Add a reference to `lights-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `lights-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
 resources:
   - type: module
-    url: /hacsfiles/lights-panel-card/lights-cover-panel-card.js
+    url: /hacsfiles/lights-panel-card/lights-panel-card.js
 ```
 
 ## Install
 
 ### Manual install
 
-1. Download and copy `lights-panel-card.js` from (https://github.com/madmicio/lights-cover-panel-card) into your `config/www`  directory.
+1. Download and copy `lights-panel-card.js` from (https://github.com/madmicio/lights-panel-card) into your `config/www`  directory.
 
-2. Add a reference to `shutter-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `lights-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
   resources:
@@ -96,12 +95,12 @@ resources:
 ### Main Options
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type` | string | **Required** | `custom:shutter-cover-panel-card` | Type of the card |
+| `type` | string | **Required** | `custom:lights-panel-card` | Type of the card |
 | `entities` | string | **Required** | entity | list of entitity |
 | `innershadow` |  | enable | enable/disable | enable - disable innershadow in the card |
 | `iconemboss` |  | enable | enable/disable | enable - disable icon emboss effect |
-| `lightrcolor` |  | "#f2f0fa" | your color | define the cover color |
-| `lightbackground` |  | "#a1a0a6" | your color | define the background cover color and up-stop-downbuttos background color |
+| `lightrcolor` |  | "#f2f0fa" | your color | define the light color |
+| `lightbackground` |  | "#a1a0a6" | your color | define the background light color and up-stop-downbuttos background color |
 | `background` |  | tranpsarent | your color | define the background card color |
 | `brightnessWidth` |  | 100px |  | define the dimmer light columns width |
 | `brightnessHeight` |  | 300px |  | define the dimmer light columns height |
@@ -109,7 +108,7 @@ resources:
 | `switchHeight` |  | 300px |  | define the switch light columns height |
 | `title` |  | string |  | card title  |
 | `countText` |  | aperte |  | text after numer of turn on lights |
-| `borderradius` |  | 15px |  | cover border-radius value |
+| `borderradius` |  | 15px |  | light border-radius value |
 | `buttonborderradius` |  | 15px |  | buttons border-radius value |
 | `lightdistance` |  | 150px |  | set distance between lights |
 | `sidebackground` |  | "#f6f5fa" |  | set sidebar background |
@@ -118,7 +117,7 @@ resources:
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities` | string | **required** | entity | entity_id |
-| `name` | string | optional | string | Define the name of the cover or automatically it takes the friendly name |
+| `name` | string | optional | string | Define the name of the light or automatically it takes the friendly name |
 
 ### side buttons Options
 | Name | Type | Default | Supported options | Description |
