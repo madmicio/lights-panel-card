@@ -62,7 +62,7 @@ class LightsPanelCard extends LitElement {
                         <h2>${ent.name || stateObj.attributes.friendly_name}</h2>
                         ${stateObj.attributes.supported_features > 9 ? html`
                             <h4 class="brightness">${stateObj.state === "off" ? 0 : Math.round(stateObj.attributes.brightness/2.55)}</h4>
-                            <div class="range-holder" style="--slider-height: ${brightnessHeight}; --lightcolor: ${lightcolor}; --lightbackground: ${lightbackground}; --borderradius: ${borderradius};">
+                            <div class="range-holder" style="--slider-height: ${switchHeight}; --lightcolor: ${lightcolor}; --lightbackground: ${lightbackground}; --borderradius: ${borderradius};">
                               <input type="range" class="${stateObj.state}" style="--slider-width: ${switchWidth};--slider-height: ${switchHeight};" .value="${stateObj.state === "off" ? 0 : Math.round(stateObj.attributes.brightness/2.55)}" @change=${e => this._setBrightness(stateObj, e.target.value)}>
                             </div>
                         ` : html`
